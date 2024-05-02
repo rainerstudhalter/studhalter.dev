@@ -1,0 +1,14 @@
+@media print {
+    html {line-height:1.25;}
+    html:has(.page-type-logo.hide-nav) {--font-size-base: 24px;}
+    #dev-breakpoints {@apply hidden;}
+}
+
+@page {
+    size: A4 portrait;
+    margin:10mm;
+    margin-top:10mm;
+    margin-bottom:5mm;
+    margin-left:12mm;
+    margin-right:12mm;
+}

@@ -1,0 +1,44 @@
+.page-business-card {
+    @media print {
+        &.page-type-logo.hide-nav {
+            color:black;
+            #logo-container {
+                @apply mt-1.4mm w-full h-auto pl-4.75mm pr-2.8mm;
+            }
+            #logo {
+                @apply w-full h-auto;
+                .gradient-color {stop-color:black;}
+                .fill-color {fill:black;}
+            }
+            #intro {
+                @apply px-4mm;
+                #name {@apply mt-0.5mm text-4.35mm leading-1em uppercase;}
+                .services {
+                    @apply text-2.75mm;
+                }
+            }
+
+            #footer {
+                .contact {
+                    .address {
+                        @apply my-1.8mm;
+                        address {@apply flex flex-wrap justify-center;}
+                            .street {@apply w-full;}
+                            .locality::after {content:"•"; @apply ml-2 mr-2;}
+                    }
+                    .links {}
+                    .business-card-slogan {
+                        @apply block pt-5mm text-center;
+                        .title {@apply mb-8.8mm text-4.8mm font-bold;}
+                        .slogan {@apply mb-8.8mm text-3.8mm;}
+                        .url {@apply block mb-1mm text-4.8mm;}
+                    }
+                    .vcard {
+                        @apply block mt-0 pt-0 pb-5mm px-5mm text-center;
+                        .qrcode-vcard-url {@apply block;}
+                    }
+                }
+            }
+        }
+    }
+}

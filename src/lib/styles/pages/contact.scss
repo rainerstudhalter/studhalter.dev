@@ -1,0 +1,80 @@
+.page-contact {
+    #page-content {
+        @apply flex flex-col pb-0;
+        &::after {content:none;}
+    }
+    #headline {
+        @apply mb-0;
+        &::after {content:none;}
+    }
+    #content {
+        @apply flex-auto flex flex-col px-0;
+        .success {
+            padding-left:var(--content-padding-x); padding-right:var(--content-padding-x);
+            @apply mb-4 border-b-0.375em border-b-primary bg-surface-success;
+            > :first-child {@apply mt-4;}
+            > :last-child {@apply mb-4;}
+        }
+        .review {
+            @apply mb-4;
+            .title {
+                @apply mb-0 py-4;
+                @apply font-bold;
+                padding-left:var(--content-padding-x); padding-right:var(--content-padding-x);
+
+            }
+            .content {
+                @apply py-4 bg-primary-light/40 border-y-2;
+                padding-left:var(--content-padding-x); padding-right:var(--content-padding-x);
+            }
+            .message {
+                .content {@apply whitespace-pre-wrap;}
+            }
+        }
+        .post {
+            padding-left:var(--content-padding-x); padding-right:var(--content-padding-x);
+            > :first-child {@apply mt-4;}
+            > :last-child {@apply mb-4;}
+            a {
+                @include text-link-spanned;
+                @apply before:content-none after:content-none;
+                span.text {@apply before:content-none;}
+            }
+        }
+        .error {
+            padding-left:var(--content-padding-x); padding-right:var(--content-padding-x);
+            @apply border-b-0.375em border-b-primary bg-surface-alert;
+            > :first-child {@apply mt-4;}
+            > :last-child {@apply mb-4;}
+        }
+        form {
+            @apply flex-auto flex flex-col;
+            textarea {
+                @apply flex-auto border-0 outline-none appearance-none transition-all;
+                @apply pt-6; padding-left:var(--content-padding-x); padding-right:var(--content-padding-x);
+                &:hover, &:focus {@apply outline-none bg-primary-light/40;}
+            }
+            input {
+                @apply py-2 border-t-2 outline-none transition-all;
+                padding-left:var(--content-padding-x); padding-right:var(--content-padding-x);
+                &:hover, &:focus {@apply outline-none bg-primary-light/40;}
+            }
+            button {
+                @apply relative flex justify-end items-center px-8 py-2 text-lg text-right transition-all;
+                @apply <xl:(border-b-0.375em border-b-primary bg-surface-secondary);
+                //@apply xl:(border-t-0.375em border-t-primary);
+                span.icon {@apply mr-1;}
+                &:hover {@apply bg-primary-light;}
+                &::after {content:""; @apply absolute block bottom-full h-5px left-0 right-0 bg-gradient-to-t from-black/10 transition-all duration-400;}
+            }
+        }
+    }
+    #footer {
+        .contact {
+            div.write {display:none;}
+        }
+    }
+}
+
+// somehow is ignored when placed above with .show-nav &
+.show-nav #footer .contact div.write {display:block;}

@@ -1,0 +1,74 @@
+#utilities {
+    z-index:var(--z-utilities);
+	> ul > li {
+		@apply relative aspect-square overflow-visible;
+        width:var(--utility-size);
+		&.light-switch {order:0;}
+		&.language-switch {order:1;}
+		&.navigation-switch {order:2;}
+	}
+    > ul > li.light-switch {@apply lt-sm:hidden;}
+    > ul > li.language-switch {@apply lt-sm:hidden;}
+    @screen lt-xl {
+        @apply absolute top-0 right-0 pt-3 pr-3;
+        > ul {@apply flex flex-row flex-nowrap;}
+    }
+    @screen lt-sm {
+        > ul > li.light-switch {@apply hidden;}
+        > ul > li.language-switch {@apply hidden;}
+        .show-nav & {
+            > ul > li.light-switch {@apply block absolute; top:calc(var(--header-height) + 1.75rem); right:0.75rem;}
+            > ul > li.language-switch {@apply block absolute; top:calc(var(--header-height) + 1.75rem); right:calc(var(--utility-size) + 0.75rem);}
+        }
+    }
+    @screen xl {
+        @apply absolute top-0 bottom-0 right-0 w-15 p-3 pl-2 bg-surface-primary transition-all;
+        > ul {@apply grid;}
+        .page-type-content & {@apply fixed;}
+    }
+    
+    @media print {
+        @apply hidden;
+    }
+}
+#light-switch {
+    @include btn-utility;
+	@apply transition-all;
+	.light-mode {@apply dark:hidden;}
+	.dark-mode {@apply hidden dark:inline-block;}
+}
+#language-switch {
+	@include btn-utility-effect;
+    @apply z-50 absolute flex transition-all;
+	li {@apply overflow-hidden transition-all;}
+	a {
+		@include btn-utility-sizing;
+        @apply transition-all;
+		@apply hover:bg-primary-light/40;
+	}
+	&:hover {
+		@apply bg-surface-primary shadow-around-lg;
+	}
+    @screen lt-xl {
+        @apply top-0 flex-col;
+        li {@apply h-0;}
+        li.active {@apply order-first; height:var(--utility-size);}
+        &:hover {
+            li {@apply border-t; height:var(--utility-size);}
+            li.active {@apply border-t-0;}
+        }
+    }
+    @screen xl {
+        @apply right-0 flex-row;
+        li {@apply w-0;}
+        li.active {@apply order-last; width:var(--utility-size);}
+        &:hover {
+            li {@apply border-r; width:var(--utility-size);}
+            li.active {@apply border-r-0;}
+        }
+    }
+}
+#navigation-switch {
+	@include btn-utility;
+    @apply text-xl transition-all;
+}

@@ -1,0 +1,79 @@
+#logo-container {
+    @apply relative flex flex-row justify-center content-end items-end transition-all;
+    &::after {content:""; @apply absolute block top-full h-5px w-full bg-gradient-to-b from-black/10 transition-all duration-400;}
+    .page-type-logo.hide-nav & {
+		@apply w-full;
+		@apply h-30vh sm:h-35vh md:h-40vh xl:h-45vh;
+    }
+    .page-type-logo.show-nav &, .page-type-content & {
+        &::after {@apply w-0;}
+        @screen lt-xl {
+            @apply z-10 absolute top-0 min-h-auto;
+            left:calc(var(--content-padding-x) - 0.25rem); width:var(--logo-width); height:var(--logo-width);
+        }
+        @screen xl { 
+            @apply min-h-auto h-60 px-8 pt-4;
+        }
+    }
+
+    @media print {
+        #page & {
+            &::after {@apply w-0;}
+        }
+        .page-type-logo.hide-nav & {
+            @apply h-30.6vh pl-2;
+        }
+        .page-type-logo.show-nav &, .page-type-content & {
+            @apply relative top-auto left-auto mr-8;
+        }
+    }
+}
+#logo {
+    @apply relative block w-auto h-full aspect-square rounded-0 overflow-hidden transition-all pointer-events-auto;
+    .gradient-color {stop-color:rgb(var(--text-color));}
+	.fill-color {fill:rgb(var(--text-color));}
+    
+    svg {
+        @apply z-0 absolute bottom-0 left-0 w-full h-auto transition-all;
+        transform:translateX(0) translateY(0);
+        &#logo_areas {@apply z-10;}
+    }
+    .page-type-logo.show-nav &, .page-type-content & {
+        @screen lt-xl {
+            @apply bg-surface-primary;
+            svg {
+                @apply w-125%;
+                transform:translateX(-25%) translateY(22%);
+            }
+            &:hover {
+                
+            }
+        }
+        @screen xl {
+            @apply bg-surface-primary rounded-full shadow-around;
+            @apply hover:(shadow-around-md shadow-primary);
+            svg {
+                @apply w-124%;
+                transform:translateX(-25%) translateY(19%);
+            }
+        }
+    }
+
+    @media print {
+        .page-type-logo.hide-nav & {
+            @apply bg-no-repeat bg-surface-primary;
+            background-image:url(/logo.webp); background-size:100%; background-position:center bottom;
+            svg {@apply hidden;}
+            
+            // rounded
+            // @apply bg-no-repeat bg-surface-primary rounded-full border-1;
+            // background-image:url(/logo.webp); background-size:125%; background-position:125% -53%;
+            // svg {@apply hidden;}
+        }
+        .page-type-logo.show-nav &, .page-type-content & {
+            @apply bg-no-repeat;
+            background-image:url(/logo-260.webp); background-size:125%; background-position:125% -53%;
+            svg {@apply hidden;}
+        }
+    }
+}

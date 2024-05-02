@@ -1,0 +1,71 @@
+:root {
+    --font-size-base: 14px;
+	@screen 4xs {--font-size-base: 16px;}
+	@screen 2xs {--font-size-base: 17px;}
+	@screen 2xs {--font-size-base: 18px;}
+	@screen sm {--font-size-base: 19px;}
+	@screen md {--font-size-base: 20px;}
+	@screen lg {--font-size-base: 21px;}
+	@screen xl {--font-size-base: 22px;}
+	@screen 2xl {--font-size-base: 23px;}
+	@screen 3xl {--font-size-base: 24px;}
+
+	--utility-size:2.5rem;
+	--utilities-padding-y:0.5rem;
+	--header-padding-y:0rem;
+	--content-padding-x:1rem;
+	
+	@screen lt-xl {
+		--z-utilities:40;
+		--z-header:0;
+		--z-main:20;
+		--z-footer:30;
+	}
+	@screen xl {
+		--z-utilities:40;
+		--z-header:0;
+		--z-main:20;
+		--z-footer:10;
+	}
+
+	--z-navigation:20;
+    --z-content:10;
+	
+	@screen xl {
+		--content-padding-x:2rem;
+	}
+	@screen 2xl {
+		--content-padding-x:3rem;
+	}
+
+    --text-color: 50, 50, 50;
+
+    --color-surface-primary: 254, 254, 254;
+    --on-surface-primary: var(--text-color);
+
+    --color-surface-secondary: 248, 248, 248;
+    --on-surface-secondary: var(--text-color);
+
+	--color-surface-alert: 253, 190, 190;
+	--on-surface-alert: var(--text-color);
+
+	--color-surface-success: 219, 245, 236;
+	--on-surface-success: var(--text-color);
+
+	--color-primary: 115, 189, 249;
+    --on-primary: var(--text-color);
+
+	--color-primary-light: 209, 233, 253;
+    --on-primary-light: var(--text-color);
+
+	@media print {
+		--font-size-base: 13px;
+		--content-padding-x:0;
+	}
+}
+
+html.dark {
+    --text-color: 200, 200, 200;
+    --color-surface-primary: 38, 38, 38;
+    --color-surface-secondary: 30, 30, 30;
+}

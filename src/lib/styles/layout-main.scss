@@ -1,0 +1,28 @@
+#main {
+    @apply relative;
+    z-index:var(--z-main);
+    .page-type-logo & {
+        @apply overflow-hidden;
+    }
+    @screen lt-xl {
+        @apply transition-all;
+        .page-type-logo.hide-nav & {
+            @apply h-0;
+        }
+        .page-type-logo.show-nav & {
+            @apply h-auto;
+        }
+    }
+    @screen xl {
+        @apply col-start-2 row-start-1;
+        .page-type-logo & {
+            @apply row-span-2;
+        }
+        .show-nav & {
+            @apply shadow-around-md transition-all delay-150;
+        }
+        .page-type-content & {
+            @apply shadow-around-md transition-all delay-150; 
+        }
+    }
+}

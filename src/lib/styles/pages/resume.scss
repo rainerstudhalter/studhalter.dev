@@ -1,0 +1,79 @@
+.page-resume {
+	#content {
+
+        section {
+            @apply mb-6;
+            
+            > *:last-child {@apply mb-0;}
+        }
+
+        #profile {@apply text-justify;}
+
+        #experience {
+            @apply text-justify;
+            .item {
+                @apply mb-4;
+                &:last-child {@apply mb-0;}
+                &:hover {
+                    .header::before {@apply -top-0.2em;}
+                }
+            }
+
+            .header {
+                @apply relative flex flex-row items-end z-10;
+                @apply border-b-2 border-b-current;
+            }
+                .name {
+                    @apply my-0 font-normal;
+                    a {@apply font-normal;}
+                }
+                .duration {
+                    @apply ml-auto;
+                    //.year {@apply font-bold;}
+                    .month {@apply text-xs}
+                }
+                .role {@apply mt-4;}
+            
+        }
+        #personal {
+            .section-content {@apply flex flex-wrap gap-x-4;}
+            ul {@apply flex flex-wrap gap-x-8 my-0;}
+            a {@apply font-normal;}
+            .icon {@apply hidden;}
+        }
+	}
+
+    @media print {
+        &#page {
+            a {@apply before:content-none after:content-none;}
+            #headline {@apply hidden;}
+            #content {
+                #experience {
+                    .header {@apply mb-1 border-b;}
+                        .name {
+                            @apply font-bold;
+                            a {@apply font-bold;}
+                        }
+                }
+                
+            }
+            #footer {
+                @apply fixed bottom-0 w-full;
+                .url-info {
+                    @apply flex mt-0;
+                    .qrcode-url, .description {@apply hidden;}
+                    .timestamp {
+                        @apply ml-auto;
+                        .time {@apply hidden;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+html:has(.page-resume.page-lang-de) {
+    @media print {
+        --font-size-base: 12.9px;
+    }
+}

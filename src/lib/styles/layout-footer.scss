@@ -1,0 +1,103 @@
+// on smaller screens we use .contact inside footer, therefore we need to display the footer
+#footer {
+    @apply block xl:hidden;
+    .contact {
+        @apply grid h-full;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr auto auto;
+
+        @apply text-sm;
+
+        .services {@apply hidden;}
+        .url-info {@apply hidden;}
+        .business-card-slogan {@apply hidden;}
+        .vcard {@apply hidden; .url {@apply hidden;}}
+
+        .page-type-logo.hide-nav & {
+            div.write {
+                @apply col-start-1 col-span-2 self-center text-center py-8 text-base;
+                a.write {@include cta-link; .icon {@apply hidden;}}
+            }
+        }
+        .show-nav &, .page-type-content & {
+            div.write {
+                @apply col-start-1 col-span-2 self-end text-center;
+                a.write {
+                    @apply relative flex justify-center items-center py-2 text-lg border-b-0.375em border-primary bg-surface-secondary transition-all;
+                    span.icon {@apply mr-1;}
+                    &:hover {@apply bg-primary-light;}
+                    &::after {content:""; @apply absolute block bottom-full h-5px w-full bg-gradient-to-t from-black/10 transition-all duration-400;}
+                }
+            }
+        }
+
+        @screen lt-2xs {
+            @apply text-base;
+            @include contact-stacked;
+        }
+        
+        @screen 2xs {
+            @include contact-abreast;}
+    }
+
+    @media print {
+
+        .page-type-logo.hide-nav & {
+            .contact {
+                @apply block;
+                grid-template-columns:none;
+                grid-template-rows:none;
+                //font-size:19px;
+        
+                div.write {@apply hidden;}
+                .legal {@apply hidden;}
+        
+                .address {
+                    @apply my-4 py-0 justify-center text-center border-t-0;
+                    div {@apply pb-0;}
+                    // address {@apply flex flex-wrap justify-center;}
+                        // .street {@apply w-full;}
+                        // .locality::after {content:","; @apply mr-1;}
+                }
+        
+                .links {
+                    @apply my-4 py-0 border-t-0 text-center;
+                    li {@apply pb-0;}
+                    li.url {@apply block;}
+                    li.github {@apply hidden;}
+                    li.linkedin {@apply hidden;}
+                    a {
+                        @apply justify-center;
+                        span.icon {@apply hidden;}
+                    }
+                }
+                
+                .url-info {@apply hidden;}
+                .vcard {@apply flex justify-center mt-6;}
+            }
+        }
+        .show-nav &, .page-type-content & {
+            .contact {
+                @apply grid;
+                grid-template-columns: auto;
+                grid-template-rows:auto;
+                .write, .address, .links, .legal {@apply hidden;}
+                .url-info {
+                    @apply grid mt-8;
+                    grid-template-columns:auto 1fr;
+                    .qrcode-url {
+                        @apply row-start-1 row-span-3 col-start-1 block mr-4 p-2 border-1 border-current;
+                        img {@apply block;}
+                    }
+                    .description {@apply block col-start-2 m-0 pt-2;}
+                    .url {@apply block col-start-2 m-0;}
+                    .timestamp {
+                        @apply block col-start-2 m-0;
+                        .label {@apply mr-1;}
+                        .time {@apply ml-1;}
+                    }
+                }
+            }
+        }
+    }
+}

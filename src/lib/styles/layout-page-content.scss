@@ -1,0 +1,13 @@
+#page-content {
+    @apply transition-all;
+    .page-type-logo & {@apply h-0 overflow-hidden;}
+    .page-type-content & {
+        @apply z-10 relative min-h-full pb-4;;
+        @screen xl {
+            &:after {content:""; @apply block fixed z-10 bottom-0 left-18rem right-16 h-6 bg-gradient-to-t from-surface-primary from-30% via-surface-primary/90;}
+        }
+    }
+    .page-type-content.show-nav & {
+        @apply min-h-auto h-0 pb-0 overflow-hidden;
+    }
+}

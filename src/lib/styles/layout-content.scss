@@ -1,0 +1,26 @@
+#content {
+    @apply relative; padding-left:var(--content-padding-x); padding-right:var(--content-padding-x);
+    
+    h1, h2, h3, h4, h5, h6, h7 {@apply my-1em leading-7;}
+    p, ul, ol, pre {@apply my-1em leading-7;}
+    a {
+        @include text-link;
+        @apply font-bold;
+        &::before {@apply border-b-2 opacity-30 -mt-0.125rem;}
+        &::after {@apply border-b-2 opacity-70 -mt-0.125rem;}
+    }
+
+	h2 {
+		@apply relative pt-1 pb-1.5 bg-primary-light;
+        margin-left:calc(0rem - var(--content-padding-x));
+        margin-right:calc(0rem - var(--content-padding-x));
+        padding-left:var(--content-padding-x);
+        padding-right:var(--content-padding-x);
+	}
+
+    @media print {
+        h1, h2, h3, h4, h5, h6, h7 {@apply my-0.75em leading-6;}
+        p, ul, ol, pre {@apply my-0.75em leading-6;}
+        h2 {@apply mx-0 p-0 text-2xl font-bold bg-transparent border-b-3 border-b-current;}
+    }
+}

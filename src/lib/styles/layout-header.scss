@@ -1,0 +1,104 @@
+#header {
+    @apply relative pointer-events-none;
+    z-index:var(--z-header);
+    @screen lt-xl {
+        &::after {content:""; @apply absolute block top-full h-5px w-full bg-gradient-to-b from-black/10 transition-all duration-400;}
+        .page-type-logo.hide-nav & {
+            &::after {@apply w-0;}
+        }
+        .page-type-logo.show-nav &, .page-type-content & {
+            @apply relative flex flex-row flex-wrap items-center;
+            padding-right:calc(var(--utility-size) * 3 + var(--content-padding-x) - 0.25rem);
+        }
+    }
+    .page-type-logo.show-nav &, .page-type-content & {
+        @screen lt-2xs {padding-right:calc(var(--utility-size) * 2 + 0.75rem);}
+        @screen lt-3xs {padding-right:calc(var(--utility-size) + 0.75rem);}
+    }
+    @screen xl {
+        @apply flex flex-col;
+        .page-type-content & {
+            @apply fixed w-18rem h-full overflow-auto;
+        }
+    }
+
+    .contact {
+        @apply hidden pointer-events-auto;
+        .services {@apply hidden;}
+        .url-info {@apply hidden;}
+        .business-card-slogan {@apply hidden;}
+        .vcard {@apply hidden; .url {@apply hidden;}}
+    
+        @screen xl {
+            @apply flex-auto grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr auto auto;
+            @apply text-xs;
+    
+            div.write {
+                @apply col-start-1 col-span-2 self-center text-center py-8 text-base;
+                a.write {@include cta-link; .icon {@apply hidden;}}
+            }
+    
+            .page-type-logo.hide-nav & {
+                @include contact-abreast;
+            }
+    
+            .show-nav &, .page-type-content & {
+                @include contact-stacked;
+            }
+        }
+    }
+
+    @media print {
+        @apply after:content-none;
+        .page-type-logo.show-nav &, .page-type-content & {
+            @apply grid mb-8 border-b border-b-current;
+            grid-template-columns:auto 1fr;
+            grid-template-rows: none;
+
+            &::after {content:""; @apply absolute block top-full h-auto w-full pt-1 bg-transparent border-b-5 border-b-current;}
+
+            .contact {
+                @apply grid text-lg;
+                grid-template-columns:1fr auto;
+                grid-template-rows: auto auto;
+                .write, .legal {@apply hidden;}
+                .address {
+                    @apply block col-start-1 row-start-1 mt-auto pt-2;
+                    address {@apply flex flex-row flex-wrap not-italic;}
+                        .name {@apply w-full text-2xl font-bold;}
+                        .street {&:after {content:","; @apply mr-1;}}
+                        .locality {&:after {content:","; @apply mr-1;}}
+
+                }
+                .links {
+                    @apply col-start-1 row-start-2 mb-auto;
+                    .icon {@apply hidden;}
+                    ul {@apply flex;}
+                        li {
+                            @apply hidden mr-2 text-nowrap;
+                            &.phone {@apply block; &::after {content:"•";}}
+                            &.email {@apply block; &::after {content:"•";}}
+                            &.url {@apply block;}
+                            &::after {@apply ml-2;}
+                        }
+                }
+                .services {
+                    @apply block col-start-1 row-start-3;
+                    ul {@apply flex w-full;}
+                        li:first-child::after {content:"&";}
+                }
+                .vcard {
+                    @apply flex col-start-2 row-span-2;
+                    .qrcode-vcard-url {
+                        @apply block my-auto;
+                        img {
+                            @apply block max-h-22;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

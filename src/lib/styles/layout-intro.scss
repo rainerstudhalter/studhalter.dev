@@ -1,0 +1,81 @@
+#intro {
+    @apply transition-all pointer-events-auto;
+    #name {@apply transition-all block mt-0 mb-0 font-bold;}
+    #roles {@apply hidden;}
+    .services-intro {@apply hidden mb-0;}
+    .services {
+        @apply transition-all;
+        @apply flex flex-row flex-wrap ;
+        @apply list-none mt-0;
+        li {
+            &::after {content:","; @apply mr-0.3em;}
+            &:last-child:after {content:none;}
+        }
+    }
+    .page-type-logo.hide-nav & {
+        @apply pt-4 text-center;
+        #name {@apply mb-4 text-nowrap;}
+        .services-intro {@apply block;}
+        .services {
+            @apply justify-center;
+            @apply font-bold;
+            li {
+                &:nth-last-child(2):after {
+                    content:"and"; @apply mx-0.3em;
+                    [lang="de"] & {content:"und";}
+                }
+            }
+        }
+    }
+    .show-nav &, .page-type-content & {
+        .services {
+            li {
+                &:nth-last-child(2):after {
+                    content:"&"; @apply mx-0.3em;
+                }
+            }
+        }
+        @screen lt-xl {
+            @apply flex-auto pl-3;
+            margin-left:calc(var(--content-padding-x) + var(--logo-width) - 0.25rem);
+            #name {@apply text-base;}
+            .services {@apply text-sm;}
+        }
+        @screen lt-mdl {
+            .services {
+                .webapps {@apply hidden;}
+                li:first-child:after {content:"&"; @apply mx-0.3em;}
+            }
+        }
+        @screen lt-4xs {
+            @apply pl-0;
+        }
+    }
+    @screen xl {
+        .services {@apply justify-center;}
+        .page-type-logo.show-nav &, .page-type-content & {
+            @apply pt-4 text-center;
+            #name {@apply text-2xl;}
+            .services {
+                @apply text-sm;
+            }
+        }
+    }
+
+    @media print {
+        .page-type-logo.hide-nav & {
+            @apply ml-0 pl-0 pt-0 row-start-1 row-span-2;
+            #name {@apply mb-0;}
+            .services-intro {@apply hidden;}
+            .services {
+                @apply text-19px;
+                li::after {content:"•"!important; @apply ml-1;}
+                li:last-child::after {content:none!important;}
+                .webapps {@apply block;}
+            }
+        }
+        .page-type-logo.show-nav &, .page-type-content & {
+            @apply hidden;
+        }
+    }
+}
