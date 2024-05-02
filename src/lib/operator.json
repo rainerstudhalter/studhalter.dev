@@ -25,6 +25,13 @@
             "text": "LinkedIn",
             "icon": "icon-logos-linkedin-icon",
             "url": "https://www.linkedin.com/in/rainer-studhalter/"
+        },
+        {
+            "id": "github",
+            "title": "GitHub",
+            "text": "GitHub",
+            "icon": "icon-logos-github-icon",
+            "url": "https://github.com/rainerstudhalter"
         }
     ],
     "services": {

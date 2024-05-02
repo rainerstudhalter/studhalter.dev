@@ -109,15 +109,61 @@
         @apply border-t;
         // shadow effect above
         //&::before {content:""; @apply absolute block bottom-full h-5px left-0 right-0 bg-gradient-to-t from-black/10 transition-all duration-400;}
-        ul {@apply list-none inline-flex flex-col;}
-            li {@apply pb-2; &:last-child {@apply pb-0;}}
-            li.url {@apply hidden;}
-            a {
-                @include text-link-spanned;
-                @apply flex items-center;
-                span.icon {@apply w-1em h-1em mr-1.5;}
-                span.text::before {content:none;}
+        
+        // ul {@apply list-none inline-flex flex-col;}
+        //     li {@apply pb-2; &:last-child {@apply pb-0;}}
+        //     li.url {@apply hidden;}
+        //     li.github {@apply hidden;}
+        //     a {
+        //         @include text-link-spanned;
+        //         @apply flex items-center;
+        //         span.icon {@apply w-1em h-1em mr-1.5;}
+        //         span.text::before {content:none;}
+        //     }
+        //     a.github {
+        //         .icon {@apply dark:invert;}
+        //     }
+
+        // ul {
+        //     @apply list-none inline-grid;
+        // }
+        //     li {@apply col-span-2 pb-2; &:last-child {@apply pb-0;}}
+        //     li.url {@apply hidden;}
+        //     li.linkedin {@apply col-auto pb-0 mr-4;}
+        //     li.github {@apply col-auto pb-0;}
+        //     a {
+        //         @include text-link-spanned;
+        //         @apply flex items-center;
+        //         span.icon {@apply w-1em h-1em mr-1.5;}
+        //         span.text::before {content:none;}
+        //     }
+        //     a.github {
+        //         .icon {@apply dark:invert;}
+        //     }
+
+        ul {
+            @apply list-none flex flex-row flex-wrap;
+        }
+        li.url {@apply hidden;}
+            li.phone, li.email {
+                @apply basis-full pb-2;
+                a {
+                    @include text-link-spanned;
+                    @apply flex items-center;
+                    span.icon {@apply w-1em h-1em mr-1.5;}
+                    span.text::before {content:none;}
+                }
             }
+            li.linkedin, li.github {
+                @apply basis-auto pb-0;
+                span.icon {@apply w-1em h-1em;}
+                span.text {@apply hidden;}
+                a {
+                    @apply p-0.5 px-1 -ml-0.5;
+                    @include btn-utility-effect;
+                }
+            }
+            li.linkedin {@apply mr-2;}
             a.github {
                 .icon {@apply dark:invert;}
             }
@@ -154,8 +200,8 @@
         ul {
             @apply list-none;
             @apply grid;
-            //grid-template-columns: 1fr var(--utility-size) var(--utility-size);
-            grid-template-columns: 1fr var(--utility-size);
+            grid-template-columns: 1fr var(--utility-size) var(--utility-size);
+            //grid-template-columns: 1fr var(--utility-size);
         }
         li.url {@apply hidden;}
         a {
@@ -163,7 +209,7 @@
             &:hover {@apply bg-primary-light/40;}
         }
         li.phone {
-            @apply col-span-2 border-b-1;
+            @apply col-span-3 border-b-1;
             a.phone {
                 @apply flex items-center pl-4;
                 height:var(--utility-size);
@@ -178,16 +224,17 @@
                 span.icon {@apply mr-0.5em;}
                 span.text::before {content:none;}
             }
-        li.github {@apply border-r-1;}
+        li.github {}
             a.github {
                 @include btn-utility-sizing;
                 .icon {@apply dark:invert;}
                 .text {@apply hidden;}
             }
-        a.linkedin {
-            @include btn-utility-sizing;
-            .text {@apply hidden;}
-        }
+        li.linkedin {@apply border-r-1;}
+            a.linkedin {
+                @include btn-utility-sizing;
+                .text {@apply hidden;}
+            }
     
     }
     .legal {
