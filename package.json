@@ -2,6 +2,10 @@
   "name": "studhalter.dev",
   "version": "1.0.0",
   "private": true,
+  "description": "Personal website of Rainer Studhalter @ studhalter.dev",
+  "author": "Rainer Studhalter <rainer@studhalter.dev> (https://studhalter.dev)",
+  "repository": "https://github.com/rainerstudhalter/studhalter.dev.git",
+  "keywords": ["sveltekit", "unocss", "iconify", "inlag", "paraglide-js"],
   "scripts": {
     "dev": "vite dev --host",
     "debug": "dev --debug",
