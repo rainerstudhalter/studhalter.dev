@@ -33,6 +33,7 @@ npm run dev -- --open
 - projects
 - blog
 - LightSwitch
+- Tests
 
 ## License
 
