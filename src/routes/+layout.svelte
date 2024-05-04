@@ -42,8 +42,6 @@
 </svelte:head>
 
 <ParaglideJS {i18n}>
-	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
 		id="page"
 		class:show-nav={$showNav}
