@@ -44,7 +44,6 @@
 <ParaglideJS {i18n}>
 	<div
 		id="page"
-		class:show-nav={$showNav}
 		class="page-{$page.data.id ?? ($page.error ? 'error' : 'unknown')} page-type-{$page.data.type ?? 'content'} page-lang-{lang} {$showNav ? 'show-nav' : 'hide-nav'}"
 		on:click={(rainerHead.trackMouseClick)}
 	>	
