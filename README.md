@@ -28,14 +28,17 @@ npm run dev -- --open
 
 ## Todo
 - License
-- implement superforms.rocks (maybe)
-- contact: server side lang
-- projects
-- blog
+- RSS Feed
+- Projects
+- Blog
+- Implement superforms.rocks (maybe)
+- Contact: server side lang
 - LightSwitch
 - Tests
 
 ## License
+Currently UNLICENSED.
+
+I want the code to be licensed under MIT, but exclude personal details (name, address, images, etc...), my previous employers and that sort of content from being covered by the MIT license.
 
 Maybe someone can help me figure out on how to implement this.
-I want the code to be licensed under MIT, but exclude personal details (name, address, images, etc...), my previous employers and that sort of content from being covered by the MIT license.
