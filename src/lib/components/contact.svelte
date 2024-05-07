@@ -36,7 +36,7 @@
 <div class="contact">
 
     <div class="write">
-        <a class="write" href="{i18n.route('/contact')}" title="{m.links_contact()}" on:click={() => $showNav = false}>
+        <a class="write" href="{i18n.route('/contact')}" on:click={() => $showNav = false}>
             <span class="icon icon-material-symbols-edit-square-outline"></span>
             <span class="text">{m.links_contact()}</span>
         </a>
