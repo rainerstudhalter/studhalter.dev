@@ -1,0 +1,13 @@
+.page-projects {
+    .project {
+		@apply relative;
+        margin-left:calc(0rem - var(--content-padding-x));
+        margin-right:calc(0rem - var(--content-padding-x));
+        padding-left:var(--content-padding-x);
+        padding-right:var(--content-padding-x);
+
+        @apply border-b-2 border-b-current;
+
+        &:last-child {@apply border-b-0;}
+    }
+}

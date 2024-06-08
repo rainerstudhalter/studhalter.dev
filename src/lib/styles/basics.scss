@@ -40,3 +40,11 @@ h6 {@apply text-sm md:text-sm mb-4;}
 .icon-before {
 	.icon {@apply -ml-1.6em mr-0.3em;}
 }
+
+.tags {@apply flex flex-row flex-wrap -ml-1 text-xs;}
+	.tag {
+		a {
+			@apply mx-1 px-2 bg-surface-secondary;
+			@apply font-normal;
+		}
+	}

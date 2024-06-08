@@ -9,6 +9,7 @@
 	"route_privacy_path": "/datenschutz",
 	"route_projects_path": "/projekte",
 	"route_resume_path": "/lebenslauf",
+	"route_support_path": "/support",
 
 	"route_about_title": "Über mich",
 	"route_blog_title": "Blog",
@@ -17,6 +18,7 @@
 	"route_privacy_title": "Datenschutzerklärung",
 	"route_projects_title": "Projekte",
 	"route_resume_title": "Lebenslauf",
+	"route_support_title": "Support",
 	
 	"route_error_title": "Fehler",
 

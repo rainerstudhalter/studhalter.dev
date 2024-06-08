@@ -15,7 +15,8 @@
             ]
         },
         
-        // {id: 'projects', path: '/projects',},
+        //{id: 'projects', path: '/projects',},
+        {id: 'support', path: '/support',},
         // {id: 'blog', path: '/blog',},
 
         // {

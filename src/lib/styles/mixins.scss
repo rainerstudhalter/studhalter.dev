@@ -44,13 +44,27 @@
 }
 
 @mixin text-link {
-    &:not(.no-text-link) {
-        @apply relative inline-block;
-        &::before {content:""; @apply absolute top-full left-0 w-full border-solid border-current border-b opacity-20;}
-        &::after {content:""; @apply absolute top-full left-0 w-0 border-solid border-current border-b transition-all duration-400 opacity-60;}
-        &:hover:after {@apply w-full;}
-        &.active {
-            &::after {@apply w-full;}
+    &:not(:has(span.text)) {
+        &:not(.no-text-link) {
+            @apply relative inline-block;
+            &::before {content:""; @apply absolute top-full left-0 w-full border-solid border-current border-b opacity-20;}
+            &::after {content:""; @apply absolute top-full left-0 w-0 border-solid border-current border-b transition-all duration-400 opacity-60;}
+            &:hover:after {@apply w-full;}
+            &.active {
+                &::after {@apply w-full;}
+            }
+        }
+    }
+    &:has(span.text) {
+        &:not(.no-text-link) {
+            @apply relative;
+            span.text {
+                @apply relative;
+                &::before {content:""; @apply absolute top-full left-0 w-full border-solid border-current border-b opacity-20;}
+                &::after {content:""; @apply absolute top-full left-0 w-0 border-solid border-current border-b transition-all duration-400 opacity-60;}
+            }
+            &:hover span.text::after {@apply w-full;}
+            &.active span.text::after {@apply w-full;}
         }
     }
 }

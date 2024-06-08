@@ -9,6 +9,7 @@
 	"route_privacy_path": "/privacy",
 	"route_projects_path": "/projects",
 	"route_resume_path": "/resume",
+	"route_support_path": "/support",
 
 	"route_about_title": "About me",
 	"route_blog_title": "Blog",
@@ -17,6 +18,7 @@
 	"route_privacy_title": "Privacy Policy",
 	"route_projects_title": "Projects",
 	"route_resume_title": "Résumé",
+	"route_support_title": "Support",
 
 	"route_error_title": "Error",
 
