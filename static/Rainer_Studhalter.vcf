@@ -2,8 +2,8 @@ BEGIN:VCARD
 VERSION:4.0
 FN:Rainer Studhalter 
 N:Studhalter;Rainer;;;
-ADR;TYPE=work:;;In den Lettenreben 9;Oberwil;;4104;Switzerland
-TEL;TYPE=cell,work;VALUE=uri:tel:+41-76-7425292
+ADR;TYPE=work:;;Kilchzimmer 149;Langenbruck;;4438;Switzerland
+TEL;TYPE=cell,work;VALUE=uri:tel:+41-79-7368790
 EMAIL;TYPE=work:rainer@studhalter.dev
 URL:www.studhalter.dev
 REV:20240423T060000Z

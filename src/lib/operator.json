@@ -1,13 +1,13 @@
 {
     "name": "Rainer Studhalter",
-    "street": "In den Lettenreben 9",
-    "zip": "4104",
-    "city": "Oberwil BL",
+    "street": "Kilchzimmer 149",
+    "zip": "4438",
+    "city": "Langenbruck",
     "country": {
         "de": "Schweiz",
         "en": "Switzerland"
     },
-    "phone": "+41 76 742 52 92",
+    "phone": "+41 79 736 87 90",
     "email": "mail@studhalter.dev",
     "privacy_email": "privacy@studhalter.dev",
     "domain": "studhalter.dev",

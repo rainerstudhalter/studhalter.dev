@@ -1,8 +1,8 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"lang_label": "Deutsch",
-	"root_head_description": "Ich entwickle Webseiten, Webanwendungen und verwalte IT Systeme.",
-	"root_head_keywords": "SvelteKit, Python, Zope, Linux, Debian, Oberwil BL, Basel, Schweiz",
+	"root_head_description": "Ich entwickle Webseiten, Webanwendungen und verwalte IT Systeme in Langenbruck - Schweiz.",
+	"root_head_keywords": "SvelteKit, Python, Zope, Linux, Debian, Langenbruck, Basel-Land, Schweiz",
 	
 	"route_about_path": "/ueber-mich",
 	"route_contact_path": "/kontakt",
@@ -53,7 +53,7 @@
 	"contact_error_contactinfo": "Bitte hinterlassen Sie Ihre Telefonnummer, E-Mail Adresse oder andere Kontaktdaten, damit ich Sie erreichen kann.",
 	"contact_sent_review_message_title": "Diese Nachricht haben Sie hinterlassen:",
 	"contact_sent_review_contactinfo_title": "So kann ich Sie erreichen:",
-	"about_fmhth3gqjru4480bu65dgl1o": "<p>Ich bin Webentwickler und Linux-Systemadministrator und habe Freude an Technik im Allgemeinen.</p><p>Ich erstelle einfache, unkomplizierte Webseiten mit einem Fokus darauf, was Sie auszeichnet.<br>Ich entwickle auch Verwaltungsprogramme, Webanwendungen (Webapps), Webdienste and technologiebezogene Nebenprojekte.</p><p>Neben dem Programmieren und Zeit mit der Familie, gärtnere ich gerne und betreibe Krafttraining oder Bouldern (Klettern auf Absprunghöhe).<br>Ich wurde 1980 in Österreich geboren, bin dort aufgewachsen und lebe jetzt in Oberwil BL, Schweiz mit meiner wundervollen Frau und unserem Sohn.</p><p>Lesen sie meinen <a href={resume_path}>Lebenslauf</a> für einen Überblick meiner Erfahrungen.</p>",
+	"about_fmhth3gqjru4480bu65dgl1o": "<p>Ich bin Webentwickler und Linux-Systemadministrator und habe Freude an Technik im Allgemeinen.</p><p>Ich erstelle einfache, unkomplizierte Webseiten mit einem Fokus darauf, was Sie auszeichnet.<br>Ich entwickle auch Verwaltungsprogramme, Webanwendungen (Webapps), Webdienste and technologiebezogene Nebenprojekte.</p><p>Neben dem Programmieren und Zeit mit der Familie, gärtnere ich gerne und betreibe Krafttraining oder Bouldern (Klettern auf Absprunghöhe).<br>Ich wurde 1980 in Österreich geboren, bin dort aufgewachsen und lebe jetzt in Langenbruck, Schweiz mit meiner Frau und unserem Sohn.</p><p>Lesen sie meinen <a href={resume_path}>Lebenslauf</a> für einen Überblick meiner Erfahrungen.</p>",
 	"resume_link_download_text": "Herunterladen",
 	"resume_experience_title": "Erfahrung",
 	"resume_personal_title": "Persönliches",

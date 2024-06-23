@@ -116,7 +116,6 @@
 
     <div class="vcard">
         <a class="qrcode-vcard-url" href="{vCardUrl}"><img src="{qrcodevCardUrl}" alt="" /></a>
-        
     </div>
 
 </div>

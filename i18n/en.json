@@ -1,8 +1,8 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"lang_label": "English",
-	"root_description": "I build websites, webapps and IT systems in Oberwil BL - Switzerland",
-	"root_keywords": "SvelteKit, Python, Zope, Linux, Debian, Oberwil BL, Basel, Switzerland",
+	"root_description": "I build websites, webapps and IT systems in Langebruck - Switzerland",
+	"root_keywords": "SvelteKit, Python, Zope, Linux, Debian, Langenbruck, Basel-Land, Switzerland",
 	
 	"route_about_path": "/about",
 	"route_contact_path": "/contact",
@@ -50,7 +50,7 @@
 	"contact_sent_review_message_title": "Here's a quick review of your message:",
 	"contact_sent_review_contactinfo_title": "and how i can reach you:",
 	"about_sly1o6zn7vezej88pa3hpcfy": "I am a Full-stack Web Developer, Linux System Administrator and tech enthusiast in general.",
-	"about_fmhth3gqjru4480bu65dgl1o": "<p>I am a Full-stack Web Developer, Linux System Administrator and tech enthusiast in general.</p><p>I build simple, uncomplicated websites, focussing on what makes you stand out.<br>I also create management interfaces, webapps, -services and tech related side projects.</p><p>Besides programming and family time, i like to grow our own food and practice physical exercise, mostly bodyweight training and bouldering.<br>I was born 1980 in Austria, grew up there and live now in Oberwil BL, Switzerland with my lovely wife and our son.</p><p>Head over to my <a href={resume_path}>résumé</a> for an essential overview of my experiences.</p>",
+	"about_fmhth3gqjru4480bu65dgl1o": "<p>I am a Full-stack Web Developer, Linux System Administrator and tech enthusiast in general.</p><p>I build simple, uncomplicated websites, focussing on what makes you stand out.<br>I also create management interfaces, webapps, -services and tech related side projects.</p><p>Besides programming and family time, i like to grow our own food and practice physical exercise, mostly bodyweight training and bouldering.<br>I was born 1980 in Austria, grew up there and live now in Langenbruck, Switzerland with my wife and our son.</p><p>Head over to my <a href={resume_path}>résumé</a> for an essential overview of my experiences.</p>",
 	"resume_link_download_text": "Download",
 	"resume_experience_title": "Experience",
 	"resume_personal_title": "Personal",
