@@ -1,7 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"lang_label": "English",
-	"root_description": "I build websites, webapps and IT systems in Langebruck - Switzerland",
+	"root_description": "I build websites, webapps and IT systems in Langenbruck - Switzerland",
 	"root_keywords": "SvelteKit, Python, Zope, Linux, Debian, Langenbruck, Basel-Land, Switzerland",
 	
 	"route_about_path": "/about",
